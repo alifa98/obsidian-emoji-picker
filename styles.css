@@ -1,0 +1,23 @@
+#emoji-picker-modal {
+    background: none !important; /* Remove modal background */
+}
+
+#emoji-picker-modal .modal-content {
+    position: fixed;
+    width: auto;
+    max-width: none;
+    min-width: none;
+    height: auto;
+    max-height: none;
+    min-height: none;
+    z-index: 1000;
+    padding: 0;
+}
+#emoji-picker-modal .modal{
+    background: none !important; /* Remove modal background */
+    width: auto;
+    min-width: none;
+    min-height: none;
+    height: auto;
+    overflow: hidden;
+}
