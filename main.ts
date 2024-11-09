@@ -114,6 +114,7 @@ class EmojiPickerModal extends Modal {
 				this.close();
 			},
 			skinTonePosition: 'search',
+			autoFocus: true,
 		});
 
 		this.root = createRoot(this.containerEl.children[1]);
