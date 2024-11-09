@@ -1,5 +1,8 @@
 # Emoji Picker plugin for Obsidian
 
+![Selecting Emoji by Emoji Picker](docs/output.gif)
+
+
 This plugin adds a button to the editor toolbar that opens a modal with a searchable emoji picker. Clicking an emoji inserts it at the cursor position in the editor.
 
 You can also set a hotkey to open the emoji picker. 
@@ -8,7 +11,6 @@ The recommended hotkey is `Ctrl+.`, but you can set it to any key combination yo
 ## Emoji Version
 
 As of November 2024, we are using the emoji-mart library so the emoji version is [14](https://emojipedia.org/emoji-14.0/).
-
 
 ## Installation
 
