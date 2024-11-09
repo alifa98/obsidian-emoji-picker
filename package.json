@@ -1,6 +1,6 @@
 {
-	"name": "obsidian-emoji-picker",
-	"version": "1.1.0",
+	"name": "emoji-picker",
+	"version": "1.1.1",
 	"description": "An emoji picker for Obsidian.",
 	"main": "main.js",
 	"scripts": {

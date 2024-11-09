@@ -1,7 +1,7 @@
 {
-	"id": "obsidian-emoji-picker",
+	"id": "emoji-picker",
 	"name": "Emoji Picker",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"minAppVersion": "0.15.0",
 	"description": "An emoji picker for Obsidian.",
 	"author": "Ali Faraji",
