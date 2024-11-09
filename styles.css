@@ -18,6 +18,8 @@
     width: auto;
     min-width: none;
     min-height: none;
+    box-shadow: none;
     height: auto;
     overflow: hidden;
+    border: none;
 }
