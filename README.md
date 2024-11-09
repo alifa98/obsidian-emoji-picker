@@ -13,7 +13,12 @@ As of November 2024, we are using the emoji-mart library so the emoji version is
 ## Installation
 
 ### From within Obsidian
-- Open Settings > 
+
+- Open Settings > Community plugins > Browse
+- Search for "Emoji Picker"
+- Click "Install"
+- Go to "Installed plugins" and enable the plugin
+- Set a hotkey for the plugin in the settings; the command to set is `Emoji Picker: Open Emoji Picker`
 
 ### Manual installation
 
@@ -22,4 +27,4 @@ As of November 2024, we are using the emoji-mart library so the emoji version is
 - Copy the folder `emoji-picker` that includes `main.js`, `styles.css`, and `manifest.json` to your vault, such as `VaultFolder/.obsidian/plugins/emoji-picker/`.
 - Reload Obsidian.
 - Enable the plugin in the settings.
-- Set a hotkey for the plugin in the settings.
+- Set a hotkey for the plugin in the settings; the command to set is `Emoji Picker: Open Emoji Picker`
