@@ -1,7 +1,7 @@
 {
 	"name": "emoji-picker",
-	"version": "1.1.1",
-	"description": "An emoji picker for Obsidian.",
+	"version": "1.1.2",
+	"description": "An Emoji Picker that allows you to insert the latest released emojis in your notes.",
 	"main": "main.js",
 	"scripts": {
 		"dev": "node esbuild.config.mjs",
