@@ -1,6 +1,6 @@
 {
 	"name": "emoji-picker",
-	"version": "1.1.2",
+	"version": "1.1.3",
 	"description": "An Emoji Picker that allows you to insert the latest released emojis in your notes.",
 	"main": "main.js",
 	"scripts": {
