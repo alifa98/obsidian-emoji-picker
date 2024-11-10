@@ -115,6 +115,8 @@ class EmojiPickerModal extends Modal {
 			},
 			skinTonePosition: 'search',
 			autoFocus: true,
+			emojiVersion: '15',
+			theme: document.body.classList.contains('theme-dark')? 'dark' : 'light'
 		});
 
 		this.root = createRoot(this.containerEl.children[1]);
