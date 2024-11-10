@@ -45,7 +45,7 @@ export default class EmojiPickerPlugin extends Plugin {
 
 		this.addCommand({
 			id: 'open-emoji-picker',
-			name: 'Open Emoji Picker',
+			name: 'Select and Insert Emoji',
 			checkCallback: (checking: boolean) => {
 				// Conditions to check
 				const markdownView = this.app.workspace.getActiveViewOfType(MarkdownView);
