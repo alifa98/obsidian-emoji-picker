@@ -92,6 +92,7 @@ class EmojiPickerModal extends Modal {
 	}
 
 	onOpen() {
+		const theme = document.body.classList.contains('theme-dark')? 'dark' : 'light';
 		const picker = createElement(Picker, {
 			data: data,
 			onEmojiSelect: (emoji: any) => {
@@ -116,9 +117,9 @@ class EmojiPickerModal extends Modal {
 			skinTonePosition: 'search',
 			autoFocus: true,
 			emojiVersion: '15',
-			theme: document.body.classList.contains('theme-dark')? 'dark' : 'light'
+			theme: theme
 		});
-
+		
 		this.root = createRoot(this.containerEl.children[1]);
 		this.root.render(
 			picker
