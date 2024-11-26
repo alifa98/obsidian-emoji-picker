@@ -2,11 +2,14 @@
 
 ![Selecting Emoji by Emoji Picker](docs/output.gif)
 
-
 This plugin adds a button to the editor toolbar that opens a modal with a searchable emoji picker. Clicking an emoji inserts it at the cursor position in the editor.
 
-You can also set a hotkey to open the emoji picker. 
+You can also set a hotkey to open the emoji picker.
 The recommended hotkey is `Ctrl+.`, but you can set it to any key combination you like.
+
+## Why use this plugin?
+
+Unlike other plugin this plugin is using the latest versions of the emoji and also have the search functionality alogn **skin tone** and category selection which lacks in other plugins.
 
 ## Emoji Version
 
