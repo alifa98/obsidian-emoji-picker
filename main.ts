@@ -1,19 +1,10 @@
-import { App, MarkdownView, Modal, Notice, Plugin, PluginSettingTab, Setting } from 'obsidian';
+import { App, MarkdownView, Modal, Notice, Plugin } from 'obsidian';
 import data from '@emoji-mart/data'
 import Picker from '@emoji-mart/react'
 import { createElement } from 'react';
 import { Root, createRoot } from 'react-dom/client';
 
-interface EmojiPickerPluginSetting {
-	showEmojiButton: boolean;
-}
-
-const DEFAULT_SETTINGS: EmojiPickerPluginSetting = {
-	showEmojiButton: true
-}
-
 export default class EmojiPickerPlugin extends Plugin {
-	settings: EmojiPickerPluginSetting;
 	emojiButton: HTMLElement;
 
 
@@ -29,23 +20,19 @@ export default class EmojiPickerPlugin extends Plugin {
 	}
 
 	addRibbonButton() {
-		const ribbonIconEl = this.addRibbonIcon('smile', 'Open Emoji Picker', async (evt: MouseEvent) => {
+		const ribbonIconEl = this.addRibbonIcon('smile', 'Open emoji picker', async (evt: MouseEvent) => {
 			this.showEmojiPicker();
 		});
 		this.emojiButton = ribbonIconEl;
 	}
 
 	async onload() {
-		await this.loadSettings();
 
-		// This creates an icon in the left to open a modal for the emoji picker.
-		if (this.settings.showEmojiButton) {
-			this.addRibbonButton();
-		}
+		this.addRibbonButton();
 
 		this.addCommand({
 			id: 'open-emoji-picker',
-			name: 'Select and Insert Emoji',
+			name: 'Select and insert emoji',
 			checkCallback: (checking: boolean) => {
 				// Conditions to check
 				const markdownView = this.app.workspace.getActiveViewOfType(MarkdownView);
@@ -62,21 +49,10 @@ export default class EmojiPickerPlugin extends Plugin {
 			}
 		});
 
-		// This adds a settings tab so the user can configure various aspects of the plugin
-		this.addSettingTab(new EmojiPickerSettingsTab(this.app, this));
-
 	}
 
 	onunload() {
 
-	}
-
-	async loadSettings() {
-		this.settings = Object.assign({}, DEFAULT_SETTINGS, await this.loadData());
-	}
-
-	async saveSettings() {
-		await this.saveData(this.settings);
 	}
 }
 
@@ -129,35 +105,5 @@ class EmojiPickerModal extends Modal {
 	onClose() {
 		const { contentEl } = this;
 		contentEl.empty();
-	}
-}
-
-class EmojiPickerSettingsTab extends PluginSettingTab {
-	plugin: EmojiPickerPlugin;
-
-	constructor(app: App, plugin: EmojiPickerPlugin) {
-		super(app, plugin);
-		this.plugin = plugin;
-	}
-
-	display(): void {
-		const { containerEl } = this;
-
-		containerEl.empty();
-
-		new Setting(containerEl)
-			.setName('Show emoji button')
-			.setDesc('Show the emoji button in the left ribbon')
-			.addToggle(toggle => toggle
-				.setValue(this.plugin.settings.showEmojiButton)
-				.onChange(async (value) => {
-					if (value) {
-						this.plugin.addRibbonButton();
-					} else {
-						this.plugin.emojiButton.remove();
-					}
-					this.plugin.settings.showEmojiButton = value;
-					await this.plugin.saveSettings();
-				}));
 	}
 }
