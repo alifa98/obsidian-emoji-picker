@@ -1,7 +1,7 @@
 {
 	"id": "emoji-picker",
 	"name": "Emoji Picker",
-	"version": "1.2.1",
+	"version": "2.0.0",
 	"minAppVersion": "0.15.0",
 	"description": "An Emoji Picker that allows you to insert the latest released emojis in your notes.",
 	"author": "Ali Faraji",
