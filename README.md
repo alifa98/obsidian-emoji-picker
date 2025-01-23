@@ -9,7 +9,7 @@ The recommended hotkey is `Ctrl+.`, but you can set it to any key combination yo
 
 ## Why use this plugin?
 
-Unlike other plugin this plugin is using the latest versions of the emoji and also have the search functionality alogn **skin tone** and category selection which lacks in other plugins and core features of the operating systems that provides emojis picker.
+Unlike other plugin this plugin is using the latest versions of the emoji and also have the search functionality along **skin tone** and category selection which lacks in other plugins and core features of the operating systems that provides emojis picker.
 
 ## Emoji Version
 
